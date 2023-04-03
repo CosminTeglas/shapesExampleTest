@@ -24,20 +24,22 @@ public class DrawingTool {
         return false;
     }
 
-    public void calculateTotalPerimeter() {
+    public double calculateTotalPerimeter() {
         double totalPerimeter = 0d;
         for (Shape shape : shapeList) {
             totalPerimeter += shape.calculatePerimeter();
         }
         System.out.println("Total perimeter = " + totalPerimeter);
+        return totalPerimeter;
     }
 
-    public void calculateTotalSurface() {
+    public double calculateTotalSurface() {
         double totalSurface = 0d;
         for (Shape shape : shapeList) {
             totalSurface += shape.calculateSurface();
         }
         System.out.println("Total surface = " + totalSurface);
+        return totalSurface;
     }
 
 }

@@ -29,7 +29,7 @@ public class App {
 
         DrawingTool drawingTool = new DrawingTool();
 
-        Square square1 = new Square();
+        Square square1 = new Square(5);
         square1.setSide(10);
         drawingTool.addShape(square1);
         drawingTool.addShape(square1);

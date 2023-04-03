@@ -46,4 +46,45 @@ class DrawingToolTest {
     }
 
 
+    @Test
+    void calculateTotalPerimeter() {
+        //given
+        DrawingTool drawingTool = new DrawingTool();
+        Circle circle = new Circle(10);
+        Circle circle2 = new Circle(15);
+        //when
+        drawingTool.addShape(circle);
+        drawingTool.addShape(circle2);
+        //then
+        assertEquals(157.07963267948963,drawingTool.calculateTotalPerimeter(),0.000001);
+
+    }
+
+    @Test
+    void calculateTotalSurface() {
+        //given
+        DrawingTool drawingTool = new DrawingTool();
+        Circle circle = new Circle(10);
+        Circle circle2 = new Circle(15);
+        //when
+        drawingTool.addShape(circle);
+        drawingTool.addShape(circle2);
+        //then
+        assertEquals(1021.0176124166828,drawingTool.calculateTotalSurface(),0.000001);
+    }
+    @Test
+    void calculateTotalSurfaceAllShapes() {
+        //given
+        DrawingTool drawingTool = new DrawingTool();
+        Circle circle = new Circle(10);
+        Rectangle rectangle = new Rectangle(3D, 4D);
+        Square square = new Square(5);
+        //when
+        drawingTool.addShape(circle);
+        drawingTool.addShape(rectangle);
+        drawingTool.addShape(square);
+        //then
+        assertEquals(351.1592653589793,drawingTool.calculateTotalSurface(),0.00001);
+
+    }
 }
